@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +9,8 @@
 body {
     background-color: #f7f9fc;
     color: #333;
-    line-height: 1.6;
     font-size: 16px;
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
 a {
@@ -27,25 +27,21 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
+/* Header Styles */
 header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #2E8B57;
     color: white;
-    padding: 20px;
-    position: relative;
-    z-index: 100;
-}
-
-header .box1 {
-    text-align: center;
+    padding: 30px 20px;
 }
 
 header h1 {
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 header nav ul {
@@ -73,7 +69,6 @@ header nav ul li a:hover {
 
 header .box2 {
     text-align: center;
-    position: relative;
     margin-top: 20px;
 }
 
@@ -84,9 +79,9 @@ header .box2 img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
+/* Section Styles */
 section {
     padding: 40px 20px;
     margin: 20px auto;
@@ -111,23 +106,23 @@ section p {
     text-align: center;
 }
 
-section ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding-top: 20px;
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: #f09a22;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
-section ul li {
-    font-size: 1.1rem;
-    color: #555;
-    transition: all 0.3s ease;
+.btn:hover {
+    background-color: #e17b1e;
 }
 
-section ul li:hover {
-    color: #f09a22;
-}
-
+/* Services Section */
 #services {
     background-color: #f1f1f1;
 }
@@ -139,7 +134,6 @@ section ul li:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
 }
 
 .service h3 {
@@ -157,10 +151,25 @@ section ul li:hover {
     transform: translateY(-10px);
 }
 
-.service:hover p {
+/* Skills Section */
+#skills ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+#skills ul li {
+    font-size: 1.1rem;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+#skills ul li:hover {
     color: #f09a22;
 }
 
+/* Projects Section */
 #projects {
     display: flex;
     flex-wrap: wrap;
@@ -174,7 +183,6 @@ section ul li:hover {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
 .project h3 {
@@ -199,10 +207,7 @@ section ul li:hover {
     transform: translateY(-10px);
 }
 
-.project:hover a {
-    color: #333;
-}
-
+/* Contact Section */
 #contact {
     background-color: #f8f9fa;
     text-align: center;
@@ -225,13 +230,6 @@ section ul li:hover {
     border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 1.1rem;
-    transition: border-color 0.3s ease;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-    border-color: #f09a22;
-    outline: none;
 }
 
 #contact button {
@@ -242,5 +240,43 @@ section ul li:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0
+    transition: background-color 0.3s ease;
+}
 
+#contact button:hover {
+    background-color: #e17b1e;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2E8B57;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
