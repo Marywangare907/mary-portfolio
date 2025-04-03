@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(185, 182, 182);
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style:armenian;
+    padding: 30px;
+    text-align: center;
+    margin: 0;
+    background-color: #333;
+
+}
+
+nav ul li {
+    display: inline;
+    margin:
+}
+dev box 1 {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+}
+
+dev box 2 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
