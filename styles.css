@@ -1,43 +1,246 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+* {
     margin: 0;
     padding: 0;
-    background-color:rgb(185, 182, 182);
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    color: #2F4F4F;
+    margin-bottom: 15px;
 }
 
 header {
-    background: #333;
-    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2E8B57;
+    color: white;
+    padding: 20px;
+    position: relative;
+    z-index: 100;
+}
+
+header .box1 {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
     padding: 10px 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #f09a22;
+    border-radius: 5px;
+}
+
+header .box2 {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+header .box2 img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2F4F4F;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
     text-align: center;
 }
 
-nav ul {
-    list-style:armenian;
+section ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+section ul li {
+    font-size: 1.1rem;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+section ul li:hover {
+    color: #f09a22;
+}
+
+#services {
+    background-color: #f1f1f1;
+}
+
+.service {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    color: #2F4F4F;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service:hover p {
+    color: #f09a22;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #2F4F4F;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project a {
+    color: #f09a22;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project:hover a {
+    color: #333;
+}
+
+#contact {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
     padding: 30px;
-    text-align: center;
-    margin: 0;
-    background-color: #333;
-
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li {
-    display: inline;
-
-}
-dev box 1 {
-    background-color: #333;
-    color: #fff;
-    padding: 30px;
-    margin: 30px;
-    text-align: center;
-}
-
-dev box 2 {
-    background-color: #333;
-    color: #fff;
+#contact input,
+#contact textarea {
+    width: 100%;
     padding: 10px;
-    margin: 10px;
-    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
 }
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #f09a22;
+    outline: none;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #f09a22;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0
+
